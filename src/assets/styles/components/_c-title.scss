@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+.c-title{ 
+ display: flex;
+ align-items: center;
+}
+
+.c-title::before {
+  content: "";
+  display: block;
+  inline-size: calc(var(--to-rem) * 20);
+  block-size: calc(var(--to-rem) * 20);
+  margin-right: calc(var(--075) * 25);
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  transform: translateY(15px);
+
+    @include mq('md') {
+      inline-size: clamp(1.25rem, 0.679rem + 1.19vw, 1.75rem);
+      block-size: clamp(1.25rem, 0.679rem + 1.19vw, 1.75rem);
+  }
+}
+
+.c-title__wrapper{
+  display: grid;
+}
+
+.c-title__sub {
+font-size: calc(var(--to-rem) * 20);
+font-weight: var(--fw-black);
+letter-spacing: 0.05em;
+
+  @include mq('md') {
+font-size: clamp(1.25rem, 0.679rem + 1.19vw, 1.75rem);
+}
+
+}
+
+.c-title__main{
+  font-size:calc(var(--to-rem) * 60);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+
+  @include mq('md') {
+  font-size: clamp(3.75rem, 1.607rem + 4.46vw, 5.625rem);
+  }
+}
+
+.c-title__main::first-letter {
+  text-transform: uppercase;
+}
+

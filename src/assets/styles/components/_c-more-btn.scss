@@ -1,0 +1,110 @@
+@use "../global" as *;
+
+.c-more-btn {
+display: flex;
+justify-content: space-between;
+align-items: center;
+inline-size: min(100%, calc(var(--075) * 355));
+padding-block: calc(var(--to-rem) * 12);
+padding-inline: calc(var(--075) * 56) calc(var(--075) * 28);
+border-radius: 30px;
+background-color: var(--color-green);
+text-decoration: none;
+
+  @include mq('md') {
+    inline-size: calc(var(--to-rem) * 251);
+
+}
+
+}
+
+.c-more-btn__bg{
+  display: block;
+  display: grid;
+  place-items: center;
+  inline-size: calc(var(--to-rem) * 41);
+  padding-block: 9px;
+  border-radius: 30px;
+  background-color: var(--color-white);
+
+}
+
+.c-more-btn__arrow {
+  position: relative;
+  display: inline-block;
+  width:8px;
+  height: 8px;
+  color: var(--color-green);
+  line-height: 1;
+  transform: translateX(-25%) rotate(45deg);
+}
+
+.c-more-btn__arrow::before, .c-more-btn__arrow::after {
+  content: '';
+  position: absolute;
+  border-radius: 0.1em;
+  background: currentcolor;
+}
+
+.c-more-btn__arrow::before {
+  top: 0;
+  right: 0;
+  left: 0;
+  height:3px;
+}
+
+.c-more-btn__arrow::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width:3px;
+}
+
+.c-more-btn__text {
+  color: var(--color-white);
+  font-size: calc(var(--075) * 19);
+font-weight: var(--fw-bold);
+line-height: clac(29 / 19);
+letter-spacing: 0.05em;
+
+  @include mq('md') {
+  font-size: calc(var(to-rem) * 16);
+
+}
+}
+
+.c-more-btn--big{
+  display: none;
+
+  @include mq('md') {
+display: flex;
+    inline-size:clamp(21.875rem, 20.304rem + 3.27vw, 23.25rem);
+    padding-block:calc(var(--to-rem) * 21);
+    border-radius: 40px;
+  
+  }
+}
+
+.c-more-btn--big .c-more-btn__bg{
+  inline-size: calc(var(--075) * 73);
+  padding-block: 12px;
+  border-radius: 20px;
+
+
+}
+
+.c-more-btn--big .c-more-btn__arrow{
+  width: 12px;
+  height: 12px;
+}
+
+.c-more-btn--big .c-more-btn__arrow::before, .c-more-btn--big .c-more-btn__arrow::after {
+  content: '';
+  position: absolute;
+  border-radius: 0.1em;
+  background: currentcolor;
+}
+
+.c-more-btn--big .c-more-btn__text{
+  font-size: calc(var(--075) * 26 );
+}

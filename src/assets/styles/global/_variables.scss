@@ -14,13 +14,15 @@
 
 :root {
   --color-black: #000;
-
-  /* font-family */
+  --color-white: #fff;
+  --color-orange: #EF9800;
+  --color-green:#73CC29;
+  --fw-bold: 700;
+  --fw-black: 900;
   --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
   --title-font-family: "Lato", sans-serif;
-
-  // 16pxを基準として、1pxあたりのremを計算
   --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);
   --075: calc(tan(atan2(1px, var(--root-font-size))) * 1rem * 0.75);
+  --leading-trim: calc((1em - 1lh) / 2);
 
 }
