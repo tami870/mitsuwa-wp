@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+.u-trim-leading {
+  margin-block: var(--leading-trim);
+}
+
+.u-trim-leading-top {
+  margin-top: var(--leading-trim);
+}
+
+.u-trim-leading-bottom {
+  margin-bottom: var(--leading-trim);
+}
+

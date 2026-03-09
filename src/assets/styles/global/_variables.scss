@@ -19,6 +19,8 @@
   --color-green:#73CC29;
   --fw-bold: 700;
   --fw-black: 900;
+  --padding-inline:10px;
+  --padding-inlinePC:16px;
   --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
   --title-font-family: "Lato", sans-serif;
   --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);

@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.u-pc-only {
+  display: none;
+
+  @include mq('md') {
+    display: block;
+  }
+}
