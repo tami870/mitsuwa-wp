@@ -1,0 +1,12 @@
+@use "../global" as *;
+
+.l-inner{
+  box-sizing: content-box;
+  inline-size: min(100%, 1080px);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+
+  @include mq('md') {
+    padding-inline: var(--padding-inlinePC);
+  }
+}
