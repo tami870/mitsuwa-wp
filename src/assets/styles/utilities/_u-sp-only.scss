@@ -3,7 +3,7 @@
 .u-sp-only {
   display: block;
 
-  @include mq('md') {
+  @include mq('lg') {
     display: none;
   }
 }

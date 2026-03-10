@@ -1,0 +1,124 @@
+@use "../global" as *;
+
+.l-footer {
+  background-color: var(--color-white);
+  border-radius: 30px;
+  padding-block: 40px;
+  margin-bottom: 20px;
+
+  @include mq(lg) {
+    border-radius: calc(30 * var(--075));
+    padding-block: calc(130 * var(--075)) calc(85 * var(--075));
+    padding-inline: 0;
+  }
+}
+
+.l-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-inline-size: 600px;
+  margin-inline: auto;
+
+  @include mq(md) {
+    max-inline-size: 900px;
+  }
+  
+  @include mq(lg) {
+    display: grid;
+    grid-template-columns: calc(340 * var(--075)) auto 1fr;
+    grid-template-areas: 
+      "info branch nav"
+      "info branch cta";
+    column-gap: calc(80 * var(--075));
+    align-items: start;
+    text-align: left;
+    max-inline-size: calc(1600 * var(--075));
+    margin-inline: auto;
+    padding-inline: calc(50 * var(--075));
+
+    // 1024px ~ 1300px付近の調整
+    @media (max-width: 1300px) {
+      grid-template-columns: 220px auto 1fr;
+      column-gap: 30px;
+      padding-inline: 20px;
+    }
+  }
+}
+
+.l-footer__inner.l-inner {
+  inline-size: auto;
+}
+
+.l-footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @include mq(lg) {
+    grid-area: info;
+    align-items: flex-start;
+    height: 100%;
+  }
+}
+
+.l-footer__logo {
+  inline-size: 295px;
+  aspect-ratio: 295 / 98;
+  max-inline-size: 100%;
+  
+  @include mq(lg) {
+    inline-size: calc(257 * var(--075));
+    aspect-ratio: 257 / 41;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.l-footer__logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.l-footer__branch {
+  @include mq(md) {
+    inline-size: fit-content;
+    margin-inline: auto;
+  }
+
+  @include mq(lg) {
+    grid-area: branch;
+    inline-size: 100%;
+  }
+}
+
+.l-footer__nav-area {
+  inline-size: 100%;
+
+  @include mq(lg) {
+    grid-area: nav;
+  }
+}
+
+.l-footer__bottom {
+  margin-block-start: 40px;
+  text-align: center;
+
+  @include mq(lg) {
+    margin-block-start: 0;
+  }
+}
+
+.l-footer__copyright {
+  display: block;
+  margin-block-start: 12px;
+  font-size: 14px;
+  color: var(--color-black);
+  
+  @include mq(lg) {
+    margin-block-start: auto;
+    font-size: calc(14 * var(--075));
+  }
+}
