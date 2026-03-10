@@ -159,8 +159,13 @@ inline-size: min(100%, calc(var(--to-rem) * 500));
 margin-inline: auto;
 padding: calc(var(--to-rem) * 15) calc(var(--to-rem) * 16) calc(var(--to-rem) * 20);
 border-radius: 20px;
+  box-shadow: 2px 4px var(--color-orange);
 background-color: var(--color-white);
 
+  @include mq('md') {
+  box-shadow: 4px 4px var(--color-orange);
+
+}
 }
 
 .p-contact-area__card-header {
