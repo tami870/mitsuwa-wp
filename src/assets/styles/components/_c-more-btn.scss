@@ -1,24 +1,27 @@
 @use "../global" as *;
 
+/* ==========================
+  汎用ボタン
+========================== */
 .c-more-btn {
-display: flex;
-justify-content: space-between;
-align-items: center;
-inline-size: min(100%, calc(var(--056) * 355));
-padding-block: calc(var(--to-rem) * 12);
-padding-inline: calc(var(--056) * 56) calc(var(--056) * 28);
-border-radius: 30px;
-background-color: var(--color-green);
-text-decoration: none;
-
-  @include mq('md') {
-    inline-size: calc(var(--to-rem) * 250);
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: min(100%, calc(var(--056) * 355));
+  padding-block: calc(var(--to-rem) * 12);
+  padding-inline: calc(var(--056) * 56) calc(var(--056) * 28);
+  border-radius: 30px;
+  background-color: var(--color-green);
+  text-decoration: none;
 }
 
+@include mq('md') {
+  .c-more-btn {
+    inline-size: calc(var(--to-rem) * 251);
+  }
 }
 
-.c-more-btn__bg{
+.c-more-btn__bg {
   display: block;
   display: grid;
   place-items: center;
@@ -26,15 +29,14 @@ text-decoration: none;
   padding-block: 8px;
   border-radius: 15px;
   background-color: var(--color-white);
-
 }
 
 .c-more-btn__arrow {
   position: relative;
   display: inline-block;
   inline-size: 8px;
-block-size: 8px; 
- color: var(--color-green);
+  block-size: 8px; 
+  color: var(--color-green);
   line-height: 1;
   transform: translateX(-25%) rotate(45deg);
 }
@@ -50,51 +52,53 @@ block-size: 8px;
   top: 0;
   right: 0;
   left: 0;
-  block-size:3px;
+  height: 3px;
 }
 
 .c-more-btn__arrow::after {
   top: 0;
   right: 0;
   bottom: 0;
-  inline-size:3px;
+  width: 3px;
 }
 
 .c-more-btn__text {
   color: var(--color-white);
   font-size: calc(var(--056) * 19);
-font-weight: var(--fw-bold);
-line-height: clac(29 / 19);
-letter-spacing: 0.05em;
+  font-weight: var(--fw-bold);
+  line-height: calc(29 / 19);
+  letter-spacing: 0.05em;
+}
 
-
-  @include mq('md') {
+@include mq('md') {
+  .c-more-btn__text {
     font-size: calc(var(--to-rem) * 16);
-
-}
-}
-
-.c-more-btn--big{
-  display: none;
-
-  @include mq('md') {
-display: flex;
-    inline-size:clamp(18.75rem, 15.179rem + 7.44vw, 21.875rem);
-    padding-block:calc(var(--to-rem) * 15);
-    border-radius: 40px;
-  
   }
 }
 
-.c-more-btn--big .c-more-btn__bg{
+/* ==========================
+  大きいサイズのボタン
+========================== */
+.c-more-btn--big {
+  display: none;
+}
+
+@include mq('md') {
+  .c-more-btn--big {
+    display: flex;
+    inline-size: clamp(18.75rem, 15.179rem + 7.44vw, 21.875rem);
+    padding-block: calc(var(--to-rem) * 15);
+    border-radius: 40px;
+  }
+}
+
+.c-more-btn--big .c-more-btn__bg {
   inline-size: calc(var(--056) * 73);
   padding-block: 8px;
   border-radius: 20px;
-
-
 }
 
-.c-more-btn--big .c-more-btn__arrow{
+.c-more-btn--big .c-more-btn__arrow {
   inline-size: 10px;
   block-size: 10px;
 }
@@ -106,6 +110,117 @@ display: flex;
   background: currentcolor;
 }
 
-.c-more-btn--big .c-more-btn__text{
-  font-size: calc(var(--075) * 26 );
+.c-more-btn--big .c-more-btn__text {
+  font-size: calc(var(--075) * 26);
+}
+
+/* ==========================
+  Footerエリア用（流動サイズ調整済み）
+========================== */
+.c-more-btn--cta-orange,
+.c-more-btn--cta-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 100%;
+  block-size: 77px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 3px 3px 15px rgba(5, 15, 57, 0.26);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  text-decoration: none;
+}
+
+@include mq(lg) {
+  .c-more-btn--cta-orange,
+  .c-more-btn--cta-green {
+    inline-size: auto;
+    min-inline-size: clamp(calc(var(--075) * 210), 22vw, calc(var(--075) * 350));
+    block-size: clamp(calc(var(--075) * 52), 5vw, calc(var(--075) * 77));
+    padding-inline-start: clamp(calc(var(--075) * 15), 2vw, calc(var(--075) * 40));
+    padding-inline-end: clamp(calc(var(--075) * 50), 6vw, calc(var(--075) * 70));
+  }
+}
+
+.c-more-btn--cta-orange:hover,
+.c-more-btn--cta-green:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(5, 15, 57, 0.35);
+  filter: brightness(1.05);
+}
+
+.c-more-btn--cta-orange:hover .c-more-btn__arrow,
+.c-more-btn--cta-green:hover .c-more-btn__arrow {
+  transform: translateX(2px) rotate(45deg);
+}
+
+.c-more-btn--cta-orange:hover .c-more-btn__bg,
+.c-more-btn--cta-green:hover .c-more-btn__bg {
+  background-color: #fff;
+}
+
+.c-more-btn--cta-orange .c-more-btn__text,
+.c-more-btn--cta-green .c-more-btn__text {
+  font-size: 22px;
+  font-weight: var(--fw-black);
+  color: var(--color-white);
+}
+
+@include mq(lg) {
+  .c-more-btn--cta-orange .c-more-btn__text,
+  .c-more-btn--cta-green .c-more-btn__text {
+    font-size: clamp(calc(var(--075) * 15), 1.5vw, calc(var(--075) * 22));
+  }
+}
+
+.c-more-btn--cta-orange .c-more-btn__bg,
+.c-more-btn--cta-green .c-more-btn__bg {
+  position: absolute;
+  right: 15px;
+  inline-size: 58px;
+  block-size: 40px;
+  border-radius: 30px;
+  padding: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+@include mq(lg) {
+  .c-more-btn--cta-orange .c-more-btn__bg,
+  .c-more-btn--cta-green .c-more-btn__bg {
+    right: clamp(calc(var(--075) * 8), 1vw, calc(var(--075) * 15));
+    inline-size: clamp(calc(var(--075) * 44), 4vw, calc(var(--075) * 58));
+    block-size: clamp(calc(var(--075) * 28), 2.5vw, calc(var(--075) * 40));
+  }
+}
+
+.c-more-btn--cta-orange .c-more-btn__arrow,
+.c-more-btn--cta-green .c-more-btn__arrow {
+  inline-size: 11px;
+  block-size: 11px;
+  transform: translateX(-4px) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+@include mq(lg) {
+  .c-more-btn--cta-orange .c-more-btn__arrow,
+  .c-more-btn--cta-green .c-more-btn__arrow {
+    inline-size: clamp(calc(var(--075) * 10), 1vw, calc(var(--075) * 15));
+    block-size: clamp(calc(var(--075) * 10), 1vw, calc(var(--075) * 15));
+  }
+}
+
+.c-more-btn--cta-orange {
+  background-color: #ef9800;
+}
+
+.c-more-btn--cta-orange .c-more-btn__arrow {
+  color: #ef9800;
+}
+
+.c-more-btn--cta-green {
+  background-color: #73cc29;
+}
+
+.c-more-btn--cta-green .c-more-btn__arrow {
+  color: #73cc29;
 }
