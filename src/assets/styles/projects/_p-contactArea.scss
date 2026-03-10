@@ -1,6 +1,6 @@
 @use "../global" as *;
 
-.p-contactArea {
+.p-contact-area {
 padding-block: calc(var(--to-rem) * 35) calc(var(--to-rem) * 50);
 border-top-left-radius: 30px;
 border-bottom-left-radius: 30px;
@@ -19,7 +19,7 @@ border-radius: 0 100px 100px 0;
 
 
 
-.p-contactArea__header {
+.p-contact-area__header {
 display: flex;
 flex-direction: column;
 inline-size: 100%;
@@ -36,12 +36,12 @@ align-items: center;
 
 }
 
-.p-contactArea__header-btn{
+.p-contact-area__header-btn{
   margin-block-start: calc(var(--to-rem) * 10);
 
 }
 
-.p-contactArea__header-text {
+.p-contact-area__header-text {
  margin-block-start: calc(var(--to-rem) * 56);
 margin-inline: auto;
 color: var(--color-white);
@@ -52,7 +52,7 @@ font-size:calc(var(--to-rem) * 27);
 }
 
 
-.p-contactArea__header-reception-time-text {
+.p-contact-area__header-reception-time-text {
 display: flex;
 justify-content: center;
 align-items: flex-end;
@@ -76,7 +76,7 @@ text-align: left;
 }
 }
 
-.p-contactArea__header-reception-time-text.u-sp-only{
+.p-contact-area__header-reception-time-text.u-sp-only{
   display: flex;
   
    @include mq('md') {
@@ -84,7 +84,7 @@ text-align: left;
  }
 }
 
-.p-contactArea__header-text.u-pc-only{
+.p-contact-area__header-text.u-pc-only{
   @include mq('md') {
     display: flex;
     justify-content: center;
@@ -95,7 +95,7 @@ text-align: left;
   }
 }
 
-.p-contactArea__header-text.u-pc-only::before{
+.p-contact-area__header-text.u-pc-only::before{
   content: "";
   display: block;
   inline-size: calc(var(--056) * 50);
@@ -104,7 +104,7 @@ text-align: left;
   transform: translate(-10px, -3px) rotate(60deg);
 }
 
-.p-contactArea__header-text.u-pc-only::after{
+.p-contact-area__header-text.u-pc-only::after{
   content: "";
   display: block;
   inline-size: calc(var(--056) * 50);
@@ -113,7 +113,7 @@ text-align: left;
   transform: translate(10px, -3px) rotate(-60deg);
 }
 
-.p-contactArea__header-reception-time-text.u-sp-only::before{
+.p-contact-area__header-reception-time-text.u-sp-only::before{
   content: "";
   display: block;
   inline-size: calc(var(--to-rem) * 40);
@@ -126,7 +126,7 @@ text-align: left;
   }
 }
 
-.p-contactArea__header-reception-time-text.u-sp-only::after{
+.p-contact-area__header-reception-time-text.u-sp-only::after{
   content: "";
   display: block;
   inline-size: calc(var(--to-rem) * 40);
@@ -140,21 +140,21 @@ text-align: left;
   
 }
 
-.p-contactArea__cards {
+.p-contact-area__cards {
 display: grid;
-margin-top: calc(var(--to-rem) * 40);
 grid-template-columns: repeat(1, 1fr);
-place-content: center;
 gap: calc(var(--to-rem) * 13);
+place-content: center;
+margin-top: calc(var(--to-rem) * 40);
+
   @include mq('md') {
     grid-template-columns: repeat(auto-fit, minmax(min(calc(320 * var(--to-rem)), 100%), calc(350 * var(--to-rem))));
     gap: calc(var(--056) * 32);
-    
 }
 
 }
 
-.p-contactArea__card {
+.p-contact-area__card {
 inline-size: min(100%, calc(var(--to-rem) * 500));
 margin-inline: auto;
 padding: calc(var(--to-rem) * 15) calc(var(--to-rem) * 16) calc(var(--to-rem) * 20);
@@ -163,7 +163,7 @@ background-color: var(--color-white);
 
 }
 
-.p-contactArea__card-header {
+.p-contact-area__card-header {
 inline-size: min(100%, calc(var(--to-rem) * 500));
 margin-inline: auto;
 padding: calc(var(--to-rem) * 4);
@@ -176,12 +176,12 @@ text-align: center;
 
 }
 
-.p-contactArea__card-free-call-wrapper{
+.p-contact-area__card-free-call-wrapper{
   margin-top: calc(var(--to-rem) * -5);
   ;
 }
 
-.p-contactArea__card-tel {
+.p-contact-area__card-tel {
 display: block;
 inline-size: fit-content;
 margin-top: calc(var(--to-rem) * 13);
@@ -195,7 +195,7 @@ pointer-events: none
 ;
 }
 
-.p-contactArea__card-free-call {
+.p-contact-area__card-free-call {
 display: flex;
 gap: calc(var(--to-rem) * 5);
 justify-content: center;
@@ -205,7 +205,7 @@ margin-top: calc(var(--to-rem) * 5);
 ;
 }
 
-.p-contactArea__card-free-call-icon {
+.p-contact-area__card-free-call-icon {
 flex-shrink: 0;
 inline-size: min(100%, calc(var(--to-rem) * 55));
 
@@ -217,13 +217,13 @@ img{
 }
 }
 
-.p-contactArea__card-free-call-link{
+.p-contact-area__card-free-call-link{
   font-size: calc(var(--to-rem) * 26);
   font-weight: var(--fw-bold);
   
 }
 
-.p-contactArea__card-free-call-text {
+.p-contact-area__card-free-call-text {
 font-feature-settings: "palt";
 font-size: calc(var(--to-rem) * 10);
 
