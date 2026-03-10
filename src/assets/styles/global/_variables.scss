@@ -13,10 +13,11 @@
 }
 
 :root {
-  --color-black: #000;
+  --color-black: #323436;
   --color-white: #fff;
   --color-orange: #EF9800;
   --color-green:#73CC29;
+  --color-blue:#3290F5;
   --fw-bold: 700;
   --fw-black: 900;
   --padding-inline:10px;
@@ -25,6 +26,7 @@
   --title-font-family: "Lato", sans-serif;
   --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);
   --075: calc(tan(atan2(1px, var(--root-font-size))) * 1rem * 0.75);
+  --056: calc(tan(atan2(1px, var(--root-font-size))) * 1rem * 0.56);
   --leading-trim: calc((1em - 1lh) / 2);
 
 }

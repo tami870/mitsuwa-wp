@@ -1,0 +1,232 @@
+@use "../global" as *;
+
+.p-contactArea {
+padding-block: calc(var(--to-rem) * 35) calc(var(--to-rem) * 50);
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+background-color: var(--color-blue);
+
+
+@include mq('md') {
+border-radius: 0 100px 100px 0;
+}
+
+  @include mq('lg') {
+border-radius: 0 100px 100px 0;
+
+}
+}
+
+
+
+.p-contactArea__header {
+display: flex;
+flex-direction: column;
+inline-size: 100%;
+
+  @include mq('md') {
+align-items: center;
+}
+
+  @include mq('lg') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+}
+
+.p-contactArea__header-btn{
+  margin-block-start: calc(var(--to-rem) * 10);
+
+}
+
+.p-contactArea__header-text {
+ margin-block-start: calc(var(--to-rem) * 56);
+margin-inline: auto;
+color: var(--color-white);
+font-size:calc(var(--to-rem) * 27);
+ font-weight: var(--fw-black);
+ letter-spacing: 0.05em;
+ 
+}
+
+
+.p-contactArea__header-reception-time-text {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+margin-block-start: calc(var(--to-rem) * 12);
+margin-inline: auto;
+color: var(--color-white);
+font-size: calc(var(--to-rem) * 16);
+font-weight: var(--fw-bold);
+letter-spacing: 0;
+text-align: center;
+
+@include mq('md') {
+margin-block-start: calc(var(--to-rem) * 43);
+text-align: left;
+
+}
+
+  @include mq('lg') {
+    margin-inline: initial;
+
+}
+}
+
+.p-contactArea__header-reception-time-text.u-sp-only{
+  display: flex;
+  
+   @include mq('md') {
+  display: none;
+ }
+}
+
+.p-contactArea__header-text.u-pc-only{
+  @include mq('md') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(var(--056) * 58);
+    font-size: calc(var(--056) * 33 );
+    
+  }
+}
+
+.p-contactArea__header-text.u-pc-only::before{
+  content: "";
+  display: block;
+  inline-size: calc(var(--056) * 50);
+  block-size: calc(var(--to-rem) * 2);
+  background-color: var(--color-white);
+  transform: translate(-10px, -3px) rotate(60deg);
+}
+
+.p-contactArea__header-text.u-pc-only::after{
+  content: "";
+  display: block;
+  inline-size: calc(var(--056) * 50);
+  block-size: calc(var(--to-rem) * 2);
+  background-color: var(--color-white);
+  transform: translate(10px, -3px) rotate(-60deg);
+}
+
+.p-contactArea__header-reception-time-text.u-sp-only::before{
+  content: "";
+  display: block;
+  inline-size: calc(var(--to-rem) * 40);
+  block-size: calc(var(--to-rem) * 2);
+  background-color: var(--color-white);
+  transform: translate(-15px, -10px) rotate(60deg);
+
+    @include mq('md') {
+  content: none;
+  }
+}
+
+.p-contactArea__header-reception-time-text.u-sp-only::after{
+  content: "";
+  display: block;
+  inline-size: calc(var(--to-rem) * 40);
+  block-size: calc(var(--to-rem) * 2);
+  background-color: var(--color-white);
+  transform: translate(15px, -10px) rotate(-60deg);
+
+    @include mq('md') {
+  content: none;
+  }
+  
+}
+
+.p-contactArea__cards {
+display: grid;
+margin-top: calc(var(--to-rem) * 40);
+grid-template-columns: repeat(1, 1fr);
+place-content: center;
+gap: calc(var(--to-rem) * 13);
+  @include mq('md') {
+    grid-template-columns: repeat(auto-fit, minmax(min(calc(320 * var(--to-rem)), 100%), calc(350 * var(--to-rem))));
+    gap: calc(var(--056) * 32);
+    
+}
+
+}
+
+.p-contactArea__card {
+inline-size: min(100%, calc(var(--to-rem) * 500));
+margin-inline: auto;
+padding: calc(var(--to-rem) * 15) calc(var(--to-rem) * 16) calc(var(--to-rem) * 20);
+border-radius: 20px;
+background-color: var(--color-white);
+
+}
+
+.p-contactArea__card-header {
+inline-size: min(100%, calc(var(--to-rem) * 500));
+margin-inline: auto;
+padding: calc(var(--to-rem) * 4);
+border-radius: 10px;
+background-color: var(--color-blue);
+color: var(--color-white);
+font-size: calc(var(--to-rem) * 20);
+font-weight: var(--fw-bold);
+text-align: center;
+
+}
+
+.p-contactArea__card-free-call-wrapper{
+  margin-top: calc(var(--to-rem) * -5);
+  ;
+}
+
+.p-contactArea__card-tel {
+display: block;
+inline-size: fit-content;
+margin-top: calc(var(--to-rem) * 13);
+margin-inline: auto;
+font-size: calc(var(--to-rem) * 35);
+font-weight: var(--fw-bold);
+
+  @include mq('md') {
+pointer-events: none
+}
+;
+}
+
+.p-contactArea__card-free-call {
+display: flex;
+gap: calc(var(--to-rem) * 5);
+justify-content: center;
+align-items: center;
+margin-top: calc(var(--to-rem) * 5);
+
+;
+}
+
+.p-contactArea__card-free-call-icon {
+flex-shrink: 0;
+inline-size: min(100%, calc(var(--to-rem) * 55));
+
+img{
+  inline-size: 100%;
+  block-size: 100%;
+  aspect-ratio: 55 / 41;
+  object-fit: cover;
+}
+}
+
+.p-contactArea__card-free-call-link{
+  font-size: calc(var(--to-rem) * 26);
+  font-weight: var(--fw-bold);
+  
+}
+
+.p-contactArea__card-free-call-text {
+font-feature-settings: "palt";
+font-size: calc(var(--to-rem) * 10);
+
+
+}
+

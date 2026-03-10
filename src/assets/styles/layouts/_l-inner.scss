@@ -1,10 +1,15 @@
 @use "../global" as *;
 
 .l-inner{
-  box-sizing: content-box;
-  inline-size: min(100%, 1080px);
+  box-sizing: border-box;
+  max-inline-size: calc(var(--to-rem) * 1100);
   margin-inline: auto;
-  padding-inline: var(--padding-inline);
+  padding-inline: calc(var(--to-rem) * 10);
+  
+    @include mq('md') {
+        max-inline-size: calc(var(--to-rem) * 1120);
+    padding-inline: calc(var(--to-rem) * 20);
+  }
 
   @include mq('md') {
     padding-inline: var(--padding-inlinePC);
