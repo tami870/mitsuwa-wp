@@ -1,19 +1,17 @@
 <?php get_header(); ?>
-<?php get_template_part("template-parts/projects/contactArea"); ?>
-<!-- <?php
-      get_template_part("template-parts/compornet/sectionTitle", null, [
-        "sub_title" => "サービス",
-        "main_title" => "Service",
-        "heading_level" => "h2"
-      ]);
-      ?> -->
 
-<?php
-get_template_part('template-parts/compornet/more-btn', null, [
-  'url' => '/about/'
-]);
-?>
+<main class="l-main">
+  <?php get_template_part("template-parts/front-page/section", "mv"); ?>
 
-<?php get_template_part("template-parts/compornet/more-btn--big"); ?>
+  <div class="p-front-sections">
+    <?php get_template_part("template-parts/front-page/section", "news"); ?>
+    <?php get_template_part("template-parts/front-page/section", "service"); ?>
+    <?php get_template_part("template-parts/front-page/section", "about"); ?>
+    <?php get_template_part("template-parts/front-page/section", "vision"); ?>
+    <?php get_template_part("template-parts/front-page/section", "recruit"); ?>
+  </div>
+
+  <?php get_template_part("template-parts/projects/contactArea"); ?>
+</main>
 
 <?php get_footer(); ?>
