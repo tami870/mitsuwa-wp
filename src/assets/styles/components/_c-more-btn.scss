@@ -50,14 +50,14 @@ block-size: 8px;
   top: 0;
   right: 0;
   left: 0;
-  height:3px;
+  block-size:3px;
 }
 
 .c-more-btn__arrow::after {
   top: 0;
   right: 0;
   bottom: 0;
-  width:3px;
+  inline-size:3px;
 }
 
 .c-more-btn__text {

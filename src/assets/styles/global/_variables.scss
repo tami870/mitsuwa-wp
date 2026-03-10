@@ -13,15 +13,18 @@
 }
 
 :root {
-  --color-black: #323436;
+  --color-black: #000;
   --color-white: #fff;
   --color-orange: #EF9800;
   --color-green:#73CC29;
   --color-blue:#3290F5;
+  --bg-blue:#EAF7FF;
+  --bg-maii-icon:#96E058;
   --fw-bold: 700;
   --fw-black: 900;
   --padding-inline:10px;
   --padding-inlinePC:16px;
+  --header-z-index: 100;
   --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
   --title-font-family: "Lato", sans-serif;
   --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);
