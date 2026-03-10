@@ -1,0 +1,107 @@
+@use "../global" as *;
+
+.p-front-about {
+  background-color: var(--color-blue);
+  border-radius: 0 30px 30px 0;
+  margin-right: calc(var(--to-rem) * 8);
+  padding-block: calc(var(--to-rem) * 60);
+  margin-top: calc(var(--to-rem) * 40);
+
+  @include mq('md') {
+    margin-right: calc(var(--075) * 133);
+    border-radius: 0 calc(var(--075) * 70) calc(var(--075) * 70) 0;
+    padding-block: calc(var(--075) * 133);
+    margin-top: calc(var(--075) * 80);
+  }
+}
+
+.p-front-about__lead-wrap {
+  margin-top: calc(var(--to-rem) * 42);
+  @include mq('md') {
+    margin-top: calc(var(--075) * 65);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc(var(--075) * 80);
+  }
+}
+
+.p-front-about__lead {
+  color: var(--color-white);
+  font-size: calc(var(--to-rem) * 27);
+  font-weight: var(--fw-black);
+  line-height: calc(42 / 27);
+  letter-spacing: 0.05em;
+
+  @include mq('md') {
+    font-size: calc(var(--075) * 40);
+    line-height: calc(55 / 40);
+    flex-shrink: 0;
+  }
+}
+
+.p-front-about__desc {
+  color: var(--color-white);
+  font-size: calc(var(--to-rem) * 16);
+  font-weight: var(--fw-bold);
+  line-height: calc(30 / 16);
+  letter-spacing: 0.05em;
+  margin-top: calc(var(--to-rem) * 20);
+
+  @include mq('md') {
+    margin-top: 0;
+    font-size: calc(var(--075) * 16);
+    line-height: calc(30 / 16);
+    max-width: calc(var(--075) * 580);
+  }
+}
+
+.p-front-about__features {
+  margin-top: calc(var(--to-rem) * 40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--to-rem) * 30);
+
+  @include mq('md') {
+    margin-top: calc(var(--075) * 80);
+    flex-direction: row;
+    justify-content: center;
+    gap: calc(var(--075) * 100);
+  }
+}
+
+.p-about-feature__circle {
+  width: calc(var(--to-rem) * 180);
+  height: calc(var(--to-rem) * 180);
+  background-color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include mq('md') {
+    width: calc(var(--075) * 280);
+    height: calc(var(--075) * 280);
+  }
+}
+
+.p-about-feature__text {
+  color: var(--color-blue);
+  font-size: calc(var(--to-rem) * 20);
+  font-weight: var(--fw-black);
+  line-height: 1.4;
+  @include mq('md') {
+    font-size: calc(var(--075) * 32);
+  }
+}
+
+.p-front-about__btn {
+  margin-top: calc(var(--to-rem) * 50);
+  display: flex;
+  justify-content: center;
+  @include mq('md') {
+    margin-top: calc(var(--075) * 80);
+  }
+}

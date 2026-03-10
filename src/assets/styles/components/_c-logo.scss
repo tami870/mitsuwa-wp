@@ -1,0 +1,10 @@
+@use "../global" as *;
+
+.c-logo {
+  display: inline-block;
+}
+
+.c-logo img {
+  inline-size: clamp(160px, 20vw, calc(200 * var(--075)));
+  block-size: auto;
+}

@@ -1,0 +1,57 @@
+@use "../global" as *;
+
+.p-front-vision {
+  padding-block: calc(var(--to-rem) * 60);
+
+  @include mq('md') {
+    padding-block: calc(var(--075) * 100);
+  }
+}
+
+.p-front-vision__lead-wrap {
+  margin-top: calc(var(--to-rem) * 40);
+  text-align: center;
+  @include mq('md') {
+    margin-top: calc(var(--075) * 60);
+  }
+}
+
+.p-front-vision__lead {
+  font-size: calc(var(--to-rem) * 24);
+  font-weight: var(--fw-black);
+  line-height: 1.6;
+  color: var(--color-blue);
+  @include mq('md') {
+    font-size: calc(var(--075) * 37);
+  }
+}
+
+.p-front-vision__img-wrap {
+  margin-top: calc(var(--to-rem) * 30);
+  @include mq('md') {
+    margin-top: calc(var(--075) * 50);
+  }
+}
+
+.p-front-vision__img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include mq('md') {
+    border-radius: 40px;
+  }
+}
+
+.p-front-vision__btn {
+  margin-top: calc(var(--to-rem) * 40);
+  display: flex;
+  justify-content: center;
+  @include mq('md') {
+    margin-top: calc(var(--075) * 60);
+  }
+}

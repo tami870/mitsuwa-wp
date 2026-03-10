@@ -8,6 +8,7 @@
   font-size: 14px;
   font-weight: var(--fw-bold);
   line-height: calc(25 / 14);
+  text-align: left;
 
   @include mq(md) {
     font-size: 16px;
@@ -329,7 +330,7 @@
   inline-size: 100%;
 
   @include mq(md) {
-    max-inline-size: 800px;
+    max-inline-size: 550px;
     margin-inline: auto;
   }
   

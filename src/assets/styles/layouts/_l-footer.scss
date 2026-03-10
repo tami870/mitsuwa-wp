@@ -4,7 +4,8 @@
   background-color: var(--color-white);
   border-radius: 30px;
   padding-block: 40px;
-  margin-bottom: 20px;
+  margin-block-start: 100px;
+  margin-block-end: 20px;
 
   @include mq(lg) {
     border-radius: calc(30 * var(--075));
@@ -64,13 +65,13 @@
 }
 
 .l-footer__logo {
-  inline-size: 295px;
-  aspect-ratio: 295 / 98;
+  inline-size: 257px;
+  aspect-ratio: 257 / 41;
   max-inline-size: 100%;
+  display: block;
   
   @include mq(lg) {
     inline-size: calc(257 * var(--075));
-    aspect-ratio: 257 / 41;
     width: 100%;
     height: auto;
   }

@@ -115,6 +115,58 @@
 }
 
 /* ==========================
+  小さいサイズのボタン
+========================== */
+.c-more-btn--small {
+  inline-size: 84px;
+  block-size: 58px;
+  min-inline-size: auto;
+  padding-inline: 0;
+  padding-block: 0;
+  justify-content: center;
+  background-color: var(--color-orange);
+  box-shadow: 0 15px 15px rgba(74, 114, 168, 0.41);
+  border-radius: 30px;
+  transition: opacity 0.3s ease;
+}
+
+  .c-more-btn--small .c-more-btn__text {
+    display: none;
+  }
+
+  .c-more-btn--small .c-more-btn__bg {
+    background-color: transparent;
+    inline-size: auto;
+    padding-block: 0;
+    border-radius: 0;
+    position: static;
+  }
+
+  .c-more-btn--small .c-more-btn__arrow {
+    inline-size: 15px;
+    block-size: 15px;
+    color: var(--color-white);
+    transform: translateX(0) rotate(45deg);
+
+    &::before {
+      height: 4px;
+    }
+
+    &::after {
+      width: 4px;
+    }
+
+    @include mq('md') {
+    inline-size: calc(var(--075) * 84);
+    block-size: calc(var(--075) * 58);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+  }
+
+/* ==========================
   Footerエリア用（流動サイズ調整済み）
 ========================== */
 .c-more-btn--cta-orange,
